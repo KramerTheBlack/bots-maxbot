@@ -1,0 +1,16 @@
+# Секреты
+bot.conf
+token.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Логи
+*.log
+
+# IDE
+.idea/
+.vscode/

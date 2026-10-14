@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  max-bot:
+    image: mxbot:latest
+    container_name: max_bot
+    environment:
+      - BOT_CONFIG=/app/config/bot.conf
+    volumes:
+      # Настройки бота
+      - ./bot.conf:/app/config/bot.conf:ro
+      # Токен доступа MAX
+      - ./token.txt:/app/config/token.txt:ro
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
